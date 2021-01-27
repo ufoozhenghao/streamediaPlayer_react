@@ -1,8 +1,4 @@
 import React from "react";
-import ViewInfo from "./ViewInfo";
-import InputSource from "./InputSource";
-import InputBufferDuration from "./InputBufferDuration"
-import VideoRateControl from "./VideoRateControl";
 
 export default class StreamedianPlayer extends React.Component {
   constructor(props) {
@@ -61,13 +57,9 @@ export default class StreamedianPlayer extends React.Component {
 
     return (
       <div>
-        {/*<ViewInfo info={this.state.info || []} onClick={this.changeSource} />*/}
-        {/*<InputSource onClick={this.changeSource} />*/}
-        {/*<InputBufferDuration duration={this.state.bufferDuration} onChange={this.changeBufferDuration}/>*/}
         <video id={this.props.id} src={'rtsp://192.168.3.12/Streaming/Channels/101'} muted={true} controls autoPlay={true}>
           {this.props.children}
         </video>
-        {/*<VideoRateControl video={this.props.id} />*/}
       </div>
     );
   }
